@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cardname: MyString
+  cardtext: MyString
+  cardtype: MyString
+  cardset: MyString
+  cardrarity: MyString
+
+two:
+  cardname: MyString
+  cardtext: MyString
+  cardtype: MyString
+  cardset: MyString
+  cardrarity: MyString

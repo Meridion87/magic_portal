@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Cards</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cardname</th>
+      <th>Cardtext</th>
+      <th>Cardtype</th>
+      <th>Cardset</th>
+      <th>Cardrarity</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cards.each do |card| %>
+      <tr>
+        <td><%= card.cardname %></td>
+        <td><%= card.cardtext %></td>
+        <td><%= card.cardtype %></td>
+        <td><%= card.cardset %></td>
+        <td><%= card.cardrarity %></td>
+        <td><%= link_to 'Show', card %></td>
+        <td><%= link_to 'Edit', edit_card_path(card) %></td>
+        <td><%= link_to 'Destroy', card, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Card', new_card_path %>
