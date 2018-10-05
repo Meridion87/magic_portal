@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_28_225505) do
+ActiveRecord::Schema.define(version: 2018_10_05_224538) do
 
   create_table "cards", force: :cascade do |t|
     t.string "cardname"
@@ -21,6 +21,9 @@ ActiveRecord::Schema.define(version: 2018_09_28_225505) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "cardphoto"
+    t.string "cardsubtype"
+    t.string "cardmanacost"
+    t.string "cardcolors"
   end
 
   create_table "users", force: :cascade do |t|
@@ -31,6 +34,7 @@ ActiveRecord::Schema.define(version: 2018_09_28_225505) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "nombreusuario"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
