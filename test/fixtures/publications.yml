@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cards: one
+  buys: one
+  userid: 1
+  cardid: 1
+  cardprice: 1.5
+  divisa: MyString
+  cardquantity: 1
+  selled: false
+  mpid: 1
+  commentary: MyText
+  pubdate: 2018-10-05
+
+two:
+  cards: two
+  buys: two
+  userid: 1
+  cardid: 1
+  cardprice: 1.5
+  divisa: MyString
+  cardquantity: 1
+  selled: false
+  mpid: 1
+  commentary: MyText
+  pubdate: 2018-10-05

@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_05_224538) do
+ActiveRecord::Schema.define(version: 2018_10_05_231237) do
+
+  create_table "buys", force: :cascade do |t|
+    t.integer "users_id"
+    t.date "buydate"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["users_id"], name: "index_buys_on_users_id"
+  end
 
   create_table "cards", force: :cascade do |t|
     t.string "cardname"
@@ -24,6 +32,24 @@ ActiveRecord::Schema.define(version: 2018_10_05_224538) do
     t.string "cardsubtype"
     t.string "cardmanacost"
     t.string "cardcolors"
+  end
+
+  create_table "publications", force: :cascade do |t|
+    t.integer "cards_id"
+    t.integer "buys_id"
+    t.integer "userid"
+    t.integer "cardid"
+    t.float "cardprice"
+    t.string "divisa"
+    t.integer "cardquantity"
+    t.boolean "selled"
+    t.integer "mpid"
+    t.text "commentary"
+    t.date "pubdate"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["buys_id"], name: "index_publications_on_buys_id"
+    t.index ["cards_id"], name: "index_publications_on_cards_id"
   end
 
   create_table "users", force: :cascade do |t|

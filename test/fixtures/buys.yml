@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  users: one
+  buydate: 2018-10-05
+
+two:
+  users: two
+  buydate: 2018-10-05
