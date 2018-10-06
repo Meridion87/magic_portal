@@ -1,0 +1,72 @@
+<%= form_with(model: publication, local: true) do |form| %>
+  <% if publication.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(publication.errors.count, "error") %> prohibited this publication from being saved:</h2>
+
+      <ul>
+      <% publication.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :cards_id %>
+    <%= form.text_field :cards_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :buys_id %>
+    <%= form.text_field :buys_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :userid %>
+    <%= form.number_field :userid %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cardid %>
+    <%= form.number_field :cardid %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cardprice %>
+    <%= form.text_field :cardprice %>
+  </div>
+
+  <div class="field">
+    <%= form.label :divisa %>
+    <%= form.text_field :divisa %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cardquantity %>
+    <%= form.number_field :cardquantity %>
+  </div>
+
+  <div class="field">
+    <%= form.label :selled %>
+    <%= form.check_box :selled %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mpid %>
+    <%= form.number_field :mpid %>
+  </div>
+
+  <div class="field">
+    <%= form.label :commentary %>
+    <%= form.text_area :commentary %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pubdate %>
+    <%= form.date_select :pubdate %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

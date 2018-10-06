@@ -1,4 +1,4 @@
 class Publication < ApplicationRecord
-  belongs_to :cards
-  belongs_to :buys
+  belongs_to :card, optional: true
+  belongs_to :buy, optional: true
 end

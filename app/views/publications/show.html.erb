@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cards:</strong>
+  <%= @publication.card %>
+</p>
+
+<p>
+  <strong>Buys:</strong>
+  <%= @publication.buy %>
+</p>
+
+<p>
+  <strong>Userid:</strong>
+  <%= @publication.userid %>
+</p>
+
+<p>
+  <strong>Cardprice:</strong>
+  <%= @publication.cardprice %>
+</p>
+
+<p>
+  <strong>Divisa:</strong>
+  <%= @publication.divisa %>
+</p>
+
+<p>
+  <strong>Cardquantity:</strong>
+  <%= @publication.cardquantity %>
+</p>
+
+<p>
+  <strong>Selled:</strong>
+  <%= @publication.selled %>
+</p>
+
+<p>
+  <strong>Mpid:</strong>
+  <%= @publication.mpid %>
+</p>
+
+<p>
+  <strong>Commentary:</strong>
+  <%= @publication.commentary %>
+</p>
+
+<p>
+  <strong>Pubdate:</strong>
+  <%= @publication.pubdate %>
+</p>
+
+<%= link_to 'Edit', edit_publication_path(@publication) %> |
+<%= link_to 'Back', publications_path %>

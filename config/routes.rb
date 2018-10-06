@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :publications
   resources :cards
 
   devise_for :users

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_05_231237) do
+ActiveRecord::Schema.define(version: 2018_10_05_234444) do
 
   create_table "buys", force: :cascade do |t|
     t.integer "users_id"
@@ -35,10 +35,9 @@ ActiveRecord::Schema.define(version: 2018_10_05_231237) do
   end
 
   create_table "publications", force: :cascade do |t|
-    t.integer "cards_id"
+    t.integer "card_id"
     t.integer "buys_id"
     t.integer "userid"
-    t.integer "cardid"
     t.float "cardprice"
     t.string "divisa"
     t.integer "cardquantity"
@@ -49,7 +48,7 @@ ActiveRecord::Schema.define(version: 2018_10_05_231237) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["buys_id"], name: "index_publications_on_buys_id"
-    t.index ["cards_id"], name: "index_publications_on_cards_id"
+    t.index ["card_id"], name: "index_publications_on_card_id"
   end
 
   create_table "users", force: :cascade do |t|

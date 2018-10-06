@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Publications</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cards</th>
+      <th>Buys</th>
+      <th>Userid</th>
+      <th>Cardid</th>
+      <th>Cardprice</th>
+      <th>Divisa</th>
+      <th>Cardquantity</th>
+      <th>Selled</th>
+      <th>Mpid</th>
+      <th>Commentary</th>
+      <th>Pubdate</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @publications.each do |publication| %>
+      <tr>
+        <td><%= publication.cards %></td>
+        <td><%= publication.buys %></td>
+        <td><%= publication.userid %></td>
+        <td><%= publication.cardid %></td>
+        <td><%= publication.cardprice %></td>
+        <td><%= publication.divisa %></td>
+        <td><%= publication.cardquantity %></td>
+        <td><%= publication.selled %></td>
+        <td><%= publication.mpid %></td>
+        <td><%= publication.commentary %></td>
+        <td><%= publication.pubdate %></td>
+        <td><%= link_to 'Show', publication %></td>
+        <td><%= link_to 'Edit', edit_publication_path(publication) %></td>
+        <td><%= link_to 'Destroy', publication, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Publication', new_publication_path %>
