@@ -3,6 +3,10 @@ class CardsController < ApplicationController
 
   # GET /cards
   # GET /cards.json
+  def search
+      
+  end
+
   def index
     @cards = Card.all
   end

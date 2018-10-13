@@ -1,6 +1,6 @@
 class PublicationsController < ApplicationController
   before_action :set_publication, only: [:show, :edit, :update, :destroy]
-
+  require 'mtg_sdk'
   # GET /publications
   # GET /publications.json
   def index
@@ -14,6 +14,8 @@ class PublicationsController < ApplicationController
 
   # GET /publications/new
   def new
+    @id = params[:id]
+    @card = MTG::Card.find(@id)
     @publication = Publication.new
   end
 

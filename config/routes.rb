@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
 
   resources :publications
-  resources :cards
+
+  resources :cards do
+    collection do
+      get 'search'
+    end
+  end
 
   devise_for :users
 

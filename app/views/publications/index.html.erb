@@ -5,10 +5,9 @@
 <table>
   <thead>
     <tr>
-      <th>Cards</th>
-      <th>Buys</th>
+      <th>Card</th>
+      <th>Buy</th>
       <th>Userid</th>
-      <th>Cardid</th>
       <th>Cardprice</th>
       <th>Divisa</th>
       <th>Cardquantity</th>
@@ -23,10 +22,9 @@
   <tbody>
     <% @publications.each do |publication| %>
       <tr>
-        <td><%= publication.cards %></td>
-        <td><%= publication.buys %></td>
+        <td><%= publication.card_id %></td>
+        <td><%= publication.buy %></td>
         <td><%= publication.userid %></td>
-        <td><%= publication.cardid %></td>
         <td><%= publication.cardprice %></td>
         <td><%= publication.divisa %></td>
         <td><%= publication.cardquantity %></td>
