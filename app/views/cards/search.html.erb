@@ -1,5 +1,51 @@
 <!-- cards = MTG::Card.where(name: 'Resplendent Angel').all -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
 
-<%= link_to 'Aceptar', new_publication_path(:id => '386610') %>
+    <script>
+      $(function() {
+        $("#search").keyup(function()
+        {
+          $.get("https://api.magicthegathering.io/v1/cards", { "name": $(this).val() }).done(function(data)
+          {
+            //data.cards[0].multiverseid
+            $("#resultado").attr("src", data.cards[0].imageUrl);
+            $("#nomcard").text(data.cards[0].name);
+            $("#multiid").text(data.cards[0].multiverseid);
+          });
+        });
+      });
+
+      function getMI()
+      {
+        $('#multiid').attr('title');
+      };
+    </script>
+
+    <h2>Búsqueda rápida</h2>
+
+    <form>
+      <input id="search" type="text">
+    </form>
+
+    <div id="multiid"></div>
+
+    <p id="nomcard"></p>
+
+    <img id="resultado">
+
+    <p><%= link_to 'Aceptar', new_publication_path(:id => 386616) %></p>
+
+
+  </body>
+</html>
+
+
+
 
 <!-- <%= link_to 'Aceptar', new_publication_path(:id => '386621') %> -->
