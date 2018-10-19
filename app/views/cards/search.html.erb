@@ -40,12 +40,711 @@
     <img id="resultado">
 
     <p><%= link_to 'Aceptar', new_publication_path(:id => 386616) %></p>
+<!---->
+<!---------------------------------------------------------------------------------------------------------------->
+<!-- búsqueda por nombre--> <!--id name-->
+  <div class="form-row">
 
+    <label class="form-row-label" for="name">
+      <svg aria-hidden="true" focusable="false" class="" width="33" height="24" viewBox="0 0 33 24" xmlns="http://www.w3.org/2000/svg"><g fill-rule="evenodd"><path d="M2.12 5V3c0-.55.45-1 1-1h26c.55 0 1 .45 1 1v2h-28zm0 3h28V6h-28v2zm28 13c0 .55-.45 1-1 1h-26c-.55 0-1-.45-1-1V9h28v12zm-1-21h-26c-1.66 0-3 1.34-3 3v18c0 1.66 1.34 3 3 3h26c1.66 0 3-1.34 3-3V3c0-1.66-1.34-3-3-3z"></path><path d="M17.121 18h10v-1h-10v1zm0-3h10v-1h-10v1zM5.12 21c.03-1.11.95-2 2.06-2h.44c.39 0 .75-.24.91-.6.16-.36.09-.79-.18-1.08-.75-.81-1.23-2.14-1.23-3.38 0-1.79.98-2.94 2.5-2.94s2.5 1.15 2.5 2.94c0 1.24-.48 2.57-1.23 3.38-.27.29-.34.72-.18 1.08.16.36.52.6.91.6h.44c1.11 0 2.03.89 2.06 2h.995a3.057 3.057 0 0 0-3.054-3h-.44c.91-.98 1.5-2.54 1.5-4.06 0-2.49-1.57-3.94-3.5-3.94s-3.5 1.45-3.5 3.94c0 1.52.59 3.08 1.5 4.06h-.44a3.057 3.057 0 0 0-3.054 3h.994-.001z"></path></g></svg>
+      Card Name
+    </label>
+    <div class="form-row-content">
+      <div class="form-row-content-band">
+        <input type="text" name="name" id="name" class="form-input" placeholder="Any words in the name, e.g. “Fire”" autocorrect="off" spellcheck="false">
+      </div>
+    </div>
+
+  </div>
+
+  <!-- búsqueda por texto--> <!--id oracle-->
+  <div class="form-row">
+
+    <label class="form-row-label" for="oracle">
+      <svg aria-hidden="true" focusable="false" class="" width="29" height="32" viewBox="0 0 29 32" xmlns="http://www.w3.org/2000/svg"><g fill-rule="evenodd"><path d="M23.12 29c1.1 0 2-.9 2-2V7h1v23h-22v-1h19zm-21-22h21v20h-21V7zm0-4c0-.55.45-1 1-1h22c.55 0 1 .45 1 1v3h-1V2l-2 4h-21V3zm2 29h22c1.1 0 2-.9 2-2V3c0-1.66-1.34-3-3-3h-22c-1.66 0-3 1.34-3 3v24c0 1.1.9 2 2 2v1c0 1.1.9 2 2 2z"></path><path d="M4.121 11h17v-1h-17v1zm0 3h17v-1h-17v1zm0 3h17v-1h-17v1zm0 3h17v-1h-17v1z"></path></g></svg>
+      Text
+    </label>
+    <div class="form-row-content">
+
+      <div class="form-row-content-band">
+        <input type="text" name="oracle" id="oracle" class="form-input" placeholder="Any text, e.g. “draw a card”" autocorrect="off" spellcheck="false">
+        <select class="advanced-search-subjoiner js-advanced-search-subjoiner" data-field-id="oracle" data-separator="" aria-hidden="true"><option value="">Add symbol</option>
+          <option value="{T}">{T} – tap this permanent</option>
+          <option value="{Q}">{Q} – untap this permanent</option>
+          <option value="{E}">{E} – an energy counter</option>
+          <option value="{PW}">{PW} – planeswalker</option>
+          <option value="{CHAOS}">{CHAOS} – chaos</option>
+          <option value="{W}">{W} – one white mana</option>
+          <option value="{U}">{U} – one blue mana</option>
+          <option value="{B}">{B} – one black mana</option>
+          <option value="{R}">{R} – one red mana</option>
+          <option value="{G}">{G} – one green mana</option>
+          <option value="{C}">{C} – one colorless mana</option>
+          <option value="{X}">{X} – X generic mana</option>
+          <option value="{0}">{0} – zero mana</option>
+          <option value="{1}">{1} – one generic mana</option>
+          <option value="{2}">{2} – two generic mana</option>
+          <option value="{3}">{3} – three generic mana</option>
+          <option value="{4}">{4} – four generic mana</option>
+          <option value="{5}">{5} – five generic mana</option>
+          <option value="{6}">{6} – six generic mana</option>
+          <option value="{7}">{7} – seven generic mana</option>
+          <option value="{8}">{8} – eight generic mana</option>
+          <option value="{9}">{9} – nine generic mana</option>
+          <option value="{10}">{10} – ten generic mana</option>
+          <option value="{11}">{11} – eleven generic mana</option>
+          <option value="{12}">{12} – twelve generic mana</option>
+          <option value="{13}">{13} – thirteen generic mana</option>
+          <option value="{15}">{15} – fifteen generic mana</option>
+          <option value="{16}">{16} – sixteen generic mana</option>
+          <option value="{W/U}">{W/U} – one white or blue mana</option>
+          <option value="{W/B}">{W/B} – one white or black mana</option>
+          <option value="{B/R}">{B/R} – one black or red mana</option>
+          <option value="{B/G}">{B/G} – one black or green mana</option>
+          <option value="{U/B}">{U/B} – one blue or black mana</option>
+          <option value="{U/R}">{U/R} – one blue or red mana</option>
+          <option value="{R/G}">{R/G} – one red or green mana</option>
+          <option value="{R/W}">{R/W} – one red or white mana</option>
+          <option value="{G/W}">{G/W} – one green or white mana</option>
+          <option value="{G/U}">{G/U} – one green or blue mana</option>
+          <option value="{2/W}">{2/W} – two generic mana or one white mana</option>
+          <option value="{2/U}">{2/U} – two generic mana or one blue mana</option>
+          <option value="{2/B}">{2/B} – two generic mana or one black mana</option>
+          <option value="{2/R}">{2/R} – two generic mana or one red mana</option>
+          <option value="{2/G}">{2/G} – two generic mana or one green mana</option>
+          <option value="{W/P}">{W/P} – one white mana or two life</option>
+          <option value="{U/P}">{U/P} – one blue mana or two life</option>
+          <option value="{B/P}">{B/P} – one black mana or two life</option>
+          <option value="{R/P}">{R/P} – one red mana or two life</option>
+          <option value="{G/P}">{G/P} – one green mana or two life</option></select>
+        </div>
+
+        <p class="form-row-tip">
+          Enter text that should appear in the rules box.
+          You can use ~ as a placeholder for the card name.
+          Word order&nbsp;doesn't&nbsp;matter.
+        </p>
+
+      </div>
+
+    </div>
+
+    <!-- búsqueda por color-->
+    <div class="form-row">
+
+      <label class="form-row-label short">
+        <svg aria-hidden="true" focusable="false" class="" width="95" height="88" viewBox="0 0 95 88" xmlns="http://www.w3.org/2000/svg"><g fill="#000" fill-rule="evenodd"><path d="M47 30c8.284 0 15-6.716 15-15 0-8.284-6.716-15-15-15-8.284 0-15 6.716-15 15 0 8.284 6.716 15 15 15zm0-7c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zM80 53c8.284 0 15-6.716 15-15 0-8.284-6.716-15-15-15-8.284 0-15 6.716-15 15 0 8.284 6.716 15 15 15zm0-7c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zM65 88c8.284 0 15-6.716 15-15 0-8.284-6.716-15-15-15-8.284 0-15 6.716-15 15 0 8.284 6.716 15 15 15zm0-7c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zM28 88c8.284 0 15-6.716 15-15 0-8.284-6.716-15-15-15-8.284 0-15 6.716-15 15 0 8.284 6.716 15 15 15zm0-7c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zM15 54c8.284 0 15-6.716 15-15 0-8.284-6.716-15-15-15-8.284 0-15 6.716-15 15 0 8.284 6.716 15 15 15zm0-7c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z"></path></g></svg>
+        Colors
+      </label>
+      <div class="form-row-content">
+
+        <fieldset>
+          <div class="form-row-content-band">
+            <legend class="visuallyhidden">Card colors</legend>
+            <label class="advanced-search-checkbox small-columns">
+              <input type="checkbox" name="color[]" value="W" class="js-advanced-search-toggle" data-group="color" data-toggle="color">
+              <abbr class="card-symbol card-symbol-W" title="one white mana">{W}</abbr>
+              White
+            </label>
+            <label class="advanced-search-checkbox small-columns">
+              <input type="checkbox" name="color[]" value="U" class="js-advanced-search-toggle" data-group="color" data-toggle="color">
+              <abbr class="card-symbol card-symbol-U" title="one blue mana">{U}</abbr>
+              Blue
+            </label>
+            <label class="advanced-search-checkbox small-columns">
+              <input type="checkbox" name="color[]" value="B" class="js-advanced-search-toggle" data-group="color" data-toggle="color">
+              <abbr class="card-symbol card-symbol-B" title="one black mana">{B}</abbr>
+              Black
+            </label>
+            <label class="advanced-search-checkbox small-columns">
+              <input type="checkbox" name="color[]" value="R" class="js-advanced-search-toggle" data-group="color" data-toggle="color">
+              <abbr class="card-symbol card-symbol-R" title="one red mana">{R}</abbr>
+              Red
+            </label>
+            <label class="advanced-search-checkbox small-columns">
+              <input type="checkbox" name="color[]" value="G" class="js-advanced-search-toggle" data-group="color" data-toggle="color">
+              <abbr class="card-symbol card-symbol-G" title="one green mana">{G}</abbr>
+              Green
+            </label>
+            <label class="advanced-search-checkbox small-columns">
+              <input type="checkbox" name="color[]" value="C" class="js-advanced-search-toggle" data-group="color" data-toggle="colorless">
+              <abbr class="card-symbol card-symbol-C" title="one colorless mana">{C}</abbr>
+              Colorless
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <div class="form-row-content-band short">
+            <label class="visuallyhidden" for="color_comparison">Color Comparison</label>
+            <select class="form-input auto" name="color_comparison" id="color_comparison"><option value="=">Exactly these colors</option>
+              <option value=">=">Including these colors</option>
+              <option value="<=">At most these colors</option></select>
+            </div>
+          </fieldset>
+
+          <p class="form-row-tip">
+            "Including" means cards that are all the colors you select, with or without any others.
+            "At most" means cards that have some or all of the colors you select, plus colorless.
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- búsqueda por set--> <!--id set-->
+      <div class="form-row">
+
+        <label class="form-row-label" for="set">
+          <svg aria-hidden="true" focusable="false" class="" width="30" height="30" viewBox="0 0 30 30"><path d="M15 2C11.704 7.789 9.287 15.983 0 8l4 12v8h22v-8l4-12c-9.287 7.983-11.704-.211-15-6zM6 26v-4h18v4H6zm18-6.324V20H6v-.324l-2.32-6.962c5.055 1.849 8.383-.683 11.32-6.475 2.938 5.792 6.266 8.323 11.32 6.475L24 19.676z"></path></svg>
+          Sets
+        </label>
+        <div class="form-row-content">
+
+          <div class="form-row-content-band">
+            <label class="visuallyhidden" for="set">Set</label>
+            <select name="set[]" id="set" multiple="" data-component="advanced-search-autocomplete" data-placeholder="Enter a set name or choose from the list" tabindex="-1" class="select2-hidden-accessible" aria-hidden="true"><optgroup label="Expansions"><option data-svg-code="grn" value="grn">Guilds of Ravnica</option>
+              <option data-svg-code="dom" value="dom">Dominaria</option>
+              <option data-svg-code="rix" value="rix">Rivals of Ixalan</option>
+              <option data-svg-code="xln" value="xln">Ixalan</option>
+              <option data-svg-code="hou" value="hou">Hour of Devastation</option>
+              <option data-svg-code="akh" value="akh">Amonkhet</option>
+              <option data-svg-code="aer" value="aer">Aether Revolt</option>
+              <option data-svg-code="kld" value="kld">Kaladesh</option>
+              <option data-svg-code="emn" value="emn">Eldritch Moon</option>
+              <option data-svg-code="soi" value="soi">Shadows over Innistrad</option>
+              <option data-svg-code="ogw" value="ogw">Oath of the Gatewatch</option>
+              <option data-svg-code="bfz" value="bfz">Battle for Zendikar</option>
+              <option data-svg-code="dtk" value="dtk">Dragons of Tarkir</option>
+              <option data-svg-code="frf" value="frf">Fate Reforged</option>
+              <option data-svg-code="ktk" value="ktk">Khans of Tarkir</option>
+              <option data-svg-code="jou" value="jou">Journey into Nyx</option>
+              <option data-svg-code="bng" value="bng">Born of the Gods</option>
+              <option data-svg-code="ths" value="ths">Theros</option>
+              <option data-svg-code="dgm" value="dgm">Dragon's Maze</option>
+              <option data-svg-code="gtc" value="gtc">Gatecrash</option>
+              <option data-svg-code="rtr" value="rtr">Return to Ravnica</option>
+              <option data-svg-code="avr" value="avr">Avacyn Restored</option>
+              <option data-svg-code="dka" value="dka">Dark Ascension</option>
+              <option data-svg-code="isd" value="isd">Innistrad</option>
+              <option data-svg-code="nph" value="nph">New Phyrexia</option>
+              <option data-svg-code="mbs" value="mbs">Mirrodin Besieged</option>
+              <option data-svg-code="som" value="som">Scars of Mirrodin</option>
+              <option data-svg-code="roe" value="roe">Rise of the Eldrazi</option>
+              <option data-svg-code="wwk" value="wwk">Worldwake</option>
+              <option data-svg-code="zen" value="zen">Zendikar</option>
+              <option data-svg-code="arb" value="arb">Alara Reborn</option>
+              <option data-svg-code="con" value="con">Conflux</option>
+              <option data-svg-code="ala" value="ala">Shards of Alara</option>
+              <option data-svg-code="eve" value="eve">Eventide</option>
+              <option data-svg-code="shm" value="shm">Shadowmoor</option>
+              <option data-svg-code="mor" value="mor">Morningtide</option>
+              <option data-svg-code="lrw" value="lrw">Lorwyn</option>
+              <option data-svg-code="fut" value="fut">Future Sight</option>
+              <option data-svg-code="plc" value="plc">Planar Chaos</option>
+              <option data-svg-code="tsp" value="tsp">Time Spiral</option>
+              <option data-svg-code="tsp" value="tsb">Time Spiral Timeshifted</option>
+              <option data-svg-code="csp" value="csp">Coldsnap</option>
+              <option data-svg-code="dis" value="dis">Dissension</option>
+              <option data-svg-code="gpt" value="gpt">Guildpact</option>
+              <option data-svg-code="rav" value="rav">Ravnica: City of Guilds</option>
+              <option data-svg-code="sok" value="sok">Saviors of Kamigawa</option>
+              <option data-svg-code="bok" value="bok">Betrayers of Kamigawa</option>
+              <option data-svg-code="chk" value="chk">Champions of Kamigawa</option>
+              <option data-svg-code="5dn" value="5dn">Fifth Dawn</option>
+              <option data-svg-code="dst" value="dst">Darksteel</option>
+              <option data-svg-code="mrd" value="mrd">Mirrodin</option>
+              <option data-svg-code="scg" value="scg">Scourge</option>
+              <option data-svg-code="lgn" value="lgn">Legions</option>
+              <option data-svg-code="ons" value="ons">Onslaught</option>
+              <option data-svg-code="jud" value="jud">Judgment</option>
+              <option data-svg-code="tor" value="tor">Torment</option>
+              <option data-svg-code="ody" value="ody">Odyssey</option>
+              <option data-svg-code="apc" value="apc">Apocalypse</option>
+              <option data-svg-code="pls" value="pls">Planeshift</option>
+              <option data-svg-code="inv" value="inv">Invasion</option>
+              <option data-svg-code="pcy" value="pcy">Prophecy</option>
+              <option data-svg-code="nem" value="nem">Nemesis</option>
+              <option data-svg-code="mmq" value="mmq">Mercadian Masques</option>
+              <option data-svg-code="uds" value="uds">Urza's Destiny</option>
+              <option data-svg-code="ulg" value="ulg">Urza's Legacy</option>
+              <option data-svg-code="usg" value="usg">Urza's Saga</option>
+              <option data-svg-code="exo" value="exo">Exodus</option>
+              <option data-svg-code="sth" value="sth">Stronghold</option>
+              <option data-svg-code="tmp" value="tmp">Tempest</option>
+              <option data-svg-code="wth" value="wth">Weatherlight</option>
+              <option data-svg-code="vis" value="vis">Visions</option>
+              <option data-svg-code="mir" value="mir">Mirage</option>
+              <option data-svg-code="all" value="all">Alliances</option>
+              <option data-svg-code="hml" value="hml">Homelands</option>
+              <option data-svg-code="ice" value="ice">Ice Age</option>
+              <option data-svg-code="fem" value="fem">Fallen Empires</option>
+              <option data-svg-code="drk" value="drk">The Dark</option>
+              <option data-svg-code="leg" value="leg">Legends</option>
+              <option data-svg-code="atq" value="atq">Antiquities</option>
+              <option data-svg-code="arn" value="arn">Arabian Nights</option></optgroup><optgroup label="Core Sets"><option data-svg-code="m19" value="m19">Core Set 2019</option>
+                <option data-svg-code="ori" value="ori">Magic Origins</option>
+                <option data-svg-code="m15" value="m15">Magic 2015</option>
+                <option data-svg-code="m14" value="m14">Magic 2014</option>
+                <option data-svg-code="m13" value="m13">Magic 2013</option>
+                <option data-svg-code="m12" value="m12">Magic 2012</option>
+                <option data-svg-code="m11" value="m11">Magic 2011</option>
+                <option data-svg-code="m10" value="m10">Magic 2010</option>
+                <option data-svg-code="10e" value="10e">Tenth Edition</option>
+                <option data-svg-code="9ed" value="9ed">Ninth Edition</option>
+                <option data-svg-code="8ed" value="8ed">Eighth Edition</option>
+                <option data-svg-code="7ed" value="7ed">Seventh Edition</option>
+                <option data-svg-code="6ed" value="6ed">Classic Sixth Edition</option>
+                <option data-svg-code="5ed" value="5ed">Fifth Edition</option>
+                <option data-svg-code="4ed" value="4ed">Fourth Edition</option>
+                <option data-svg-code="3ed" value="sum">Summer Magic / Edgar</option>
+                <option data-svg-code="3ed" value="3ed">Revised Edition</option>
+                <option data-svg-code="2ed" value="2ed">Unlimited Edition</option>
+                <option data-svg-code="leb" value="leb">Limited Edition Beta</option>
+                <option data-svg-code="lea" value="lea">Limited Edition Alpha</option></optgroup><optgroup label="Masters"><option data-svg-code="a25" value="a25">Masters 25</option>
+                  <option data-svg-code="ima" value="ima">Iconic Masters</option>
+                  <option data-svg-code="mm3" value="mm3">Modern Masters 2017</option>
+                  <option data-svg-code="ema" value="ema">Eternal Masters</option>
+                  <option data-svg-code="mm2" value="mm2">Modern Masters 2015</option>
+                  <option data-svg-code="tpr" value="tpr">Tempest Remastered</option>
+                  <option data-svg-code="vma" value="vma">Vintage Masters</option>
+                  <option data-svg-code="mma" value="mma">Modern Masters</option>
+                  <option data-svg-code="me4" value="me4">Masters Edition IV</option>
+                  <option data-svg-code="me3" value="me3">Masters Edition III</option>
+                  <option data-svg-code="me2" value="me2">Masters Edition II</option>
+                  <option data-svg-code="me1" value="me1">Masters Edition</option>
+                  <option data-svg-code="3ed" value="fbb">Foreign Black Border</option>
+                  <option data-svg-code="ren" value="ren">Renaissance</option>
+                  <option data-svg-code="rin" value="rin">Rinascimento</option>
+                  <option data-svg-code="chr" value="chr">Chronicles</option></optgroup><optgroup label="Draft Innovation"><option data-svg-code="bbd" value="bbd">Battlebond</option>
+                    <option data-svg-code="cn2" value="cn2">Conspiracy: Take the Crown</option>
+                    <option data-svg-code="cns" value="cns">Conspiracy</option></optgroup><optgroup label="Duel Decks"><option data-svg-code="gs1" value="gs1">Global Series Jiang Yanggu &amp; Mu Yanling</option>
+                      <option data-svg-code="ddu" value="ddu">Duel Decks: Elves vs. Inventors</option>
+                      <option data-svg-code="ddt" value="ddt">Duel Decks: Merfolk vs. Goblins</option>
+                      <option data-svg-code="dds" value="dds">Duel Decks: Mind vs. Might</option>
+                      <option data-svg-code="ddr" value="ddr">Duel Decks: Nissa vs. Ob Nixilis</option>
+                      <option data-svg-code="ddq" value="ddq">Duel Decks: Blessed vs. Cursed</option>
+                      <option data-svg-code="ddp" value="ddp">Duel Decks: Zendikar vs. Eldrazi</option>
+                      <option data-svg-code="ddo" value="ddo">Duel Decks: Elspeth vs. Kiora</option>
+                      <option data-svg-code="dd1" value="evg">Duel Decks Anthology: Elves vs. Goblins</option>
+                      <option data-svg-code="dd2" value="jvc">Duel Decks Anthology: Jace vs. Chandra</option>
+                      <option data-svg-code="ddd" value="gvl">Duel Decks Anthology: Garruk vs. Liliana</option>
+                      <option data-svg-code="ddc" value="dvd">Duel Decks Anthology: Divine vs. Demonic</option>
+                      <option data-svg-code="ddn" value="ddn">Duel Decks: Speed vs. Cunning</option>
+                      <option data-svg-code="ddm" value="ddm">Duel Decks: Jace vs. Vraska</option>
+                      <option data-svg-code="ddl" value="ddl">Duel Decks: Heroes vs. Monsters</option>
+                      <option data-svg-code="ddk" value="ddk">Duel Decks: Sorin vs. Tibalt</option>
+                      <option data-svg-code="ddj" value="ddj">Duel Decks: Izzet vs. Golgari</option>
+                      <option data-svg-code="ddi" value="ddi">Duel Decks: Venser vs. Koth</option>
+                      <option data-svg-code="ddh" value="ddh">Duel Decks: Ajani vs. Nicol Bolas</option>
+                      <option data-svg-code="td2" value="td2">Duel Decks: Mirrodin Pure vs. New Phyrexia</option>
+                      <option data-svg-code="ddg" value="ddg">Duel Decks: Knights vs. Dragons</option>
+                      <option data-svg-code="ddf" value="ddf">Duel Decks: Elspeth vs. Tezzeret</option>
+                      <option data-svg-code="dde" value="dde">Duel Decks: Phyrexia vs. the Coalition</option>
+                      <option data-svg-code="ddd" value="ddd">Duel Decks: Garruk vs. Liliana</option>
+                      <option data-svg-code="ddc" value="ddc">Duel Decks: Divine vs. Demonic</option>
+                      <option data-svg-code="dd2" value="dd2">Duel Decks: Jace vs. Chandra</option>
+                      <option data-svg-code="dd1" value="dd1">Duel Decks: Elves vs. Goblins</option></optgroup><optgroup label="Archenemy"><option data-svg-code="e01" value="e01">Archenemy: Nicol Bolas</option>
+                        <option data-svg-code="arc" value="arc">Archenemy</option>
+                        <option data-svg-code="dci" value="parc">Promotional Schemes</option></optgroup><optgroup label="Box"><option data-svg-code="gnt" value="gnt">Game Night</option>
+                          <option data-svg-code="e02" value="e02">Explorers of Ixalan</option>
+                          <option data-svg-code="md1" value="md1">Modern Event Deck 2014</option>
+                          <option data-svg-code="td0" value="td0">Magic Online Theme Decks</option>
+                          <option data-svg-code="dpa" value="dpa">Duels of the Planeswalkers</option>
+                          <option data-svg-code="default" value="cst">Coldsnap Theme Decks</option>
+                          <option data-svg-code="phuk" value="phuk">Hachette UK</option>
+                          <option data-svg-code="phuk" value="psal">Salvat 2005</option>
+                          <option data-svg-code="dkm" value="dkm">Deckmasters</option>
+                          <option data-svg-code="btd" value="btd">Beatdown Box Set</option>
+                          <option data-svg-code="brb" value="brb">Battle Royale Box Set</option>
+                          <option data-svg-code="ath" value="ath">Anthologies</option>
+                          <option data-svg-code="default" value="mgb">Multiverse Gift Box</option>
+                          <option data-svg-code="default" value="rqs">Rivals Quick Start Set</option></optgroup><optgroup label="Commander"><option data-svg-code="c18" value="c18">Commander 2018</option>
+                            <option data-svg-code="cm2" value="cm2">Commander Anthology Volume II</option>
+                            <option data-svg-code="c17" value="c17">Commander 2017</option>
+                            <option data-svg-code="cma" value="cma">Commander Anthology</option>
+                            <option data-svg-code="c16" value="c16">Commander 2016</option>
+                            <option data-svg-code="c15" value="c15">Commander 2015</option>
+                            <option data-svg-code="c14" value="c14">Commander 2014</option>
+                            <option data-svg-code="c13" value="c13">Commander 2013</option>
+                            <option data-svg-code="cm1" value="cm1">Commander's Arsenal</option>
+                            <option data-svg-code="cmd" value="cmd">Commander 2011</option></optgroup><optgroup label="From The Vault"><option data-svg-code="v17" value="v17">From the Vault: Transform</option>
+                              <option data-svg-code="v16" value="v16">From the Vault: Lore</option>
+                              <option data-svg-code="v15" value="v15">From the Vault: Angels</option>
+                              <option data-svg-code="v14" value="v14">From the Vault: Annihilation</option>
+                              <option data-svg-code="v13" value="v13">From the Vault: Twenty</option>
+                              <option data-svg-code="v12" value="v12">From the Vault: Realms</option>
+                              <option data-svg-code="v11" value="v11">From the Vault: Legends</option>
+                              <option data-svg-code="v10" value="v10">From the Vault: Relics</option>
+                              <option data-svg-code="v09" value="v09">From the Vault: Exiled</option>
+                              <option data-svg-code="drb" value="drb">From the Vault: Dragons</option></optgroup><optgroup label="Funny"><option data-svg-code="ust" value="ust">Unstable</option>
+                                <option data-svg-code="h17" value="h17">HasCon 2017</option>
+                                <option data-svg-code="star" value="htr">2016 Heroes of the Realm</option>
+                                <option data-svg-code="star" value="hho">Happy Holidays</option>
+                                <option data-svg-code="unh" value="unh">Unhinged</option>
+                                <option data-svg-code="ugl" value="ugl">Unglued</option></optgroup><optgroup label="Masterpiece"><option data-svg-code="med" value="med">Mythic Edition</option>
+                                  <option data-svg-code="mp2" value="mp2">Amonkhet Invocations</option>
+                                  <option data-svg-code="mps" value="mps">Kaladesh Inventions</option>
+                                  <option data-svg-code="exp" value="exp">Zendikar Expeditions</option></optgroup><optgroup label="Memorabilia"><option data-svg-code="c18" value="oc18">Commander 2018 Oversized</option>
+                                    <option data-svg-code="default" value="htr17">2017 Heroes of the Realm</option>
+                                    <option data-svg-code="c17" value="oc17">Commander 2017 Oversized</option>
+                                    <option data-svg-code="c16" value="oc16">Commander 2016 Oversized</option>
+                                    <option data-svg-code="c15" value="oc15">Commander 2015 Oversized</option>
+                                    <option data-svg-code="c14" value="oc14">Commander 2014 Oversized</option>
+                                    <option data-svg-code="m15" value="ppc1">M15 Prerelease Challenge</option>
+                                    <option data-svg-code="c13" value="oc13">Commander 2013 Oversized</option>
+                                    <option data-svg-code="cm1" value="ocm1">Commander's Arsenal Oversized</option>
+                                    <option data-svg-code="avr" value="phel">Open the Helvault</option>
+                                    <option data-svg-code="cmd" value="ocmd">Commander 2011 Oversized</option>
+                                    <option data-svg-code="cmd" value="pcmd">Commander 2011 Launch Party</option>
+                                    <option data-svg-code="pmei" value="olgc">Legacy Championship</option>
+                                    <option data-svg-code="default" value="wc04">World Championship Decks 2004</option>
+                                    <option data-svg-code="default" value="wc03">World Championship Decks 2003</option>
+                                    <option data-svg-code="pmei" value="ovnt">Vintage Championship</option>
+                                    <option data-svg-code="default" value="wc02">World Championship Decks 2002</option>
+                                    <option data-svg-code="default" value="wc01">World Championship Decks 2001</option>
+                                    <option data-svg-code="default" value="wc00">World Championship Decks 2000</option>
+                                    <option data-svg-code="default" value="wc99">World Championship Decks 1999</option>
+                                    <option data-svg-code="default" value="wc98">World Championship Decks 1998</option>
+                                    <option data-svg-code="default" value="wc97">World Championship Decks 1997</option>
+                                    <option data-svg-code="default" value="pcel">Celebration Cards</option>
+                                    <option data-svg-code="default" value="ptc">Pro Tour Collector Set</option>
+                                    <option data-svg-code="cei" value="cei">Intl. Collectors’ Edition</option>
+                                    <option data-svg-code="ced" value="ced">Collectors’ Edition</option></optgroup><optgroup label="Planechase"><option data-svg-code="pca" value="pca">Planechase Anthology</option>
+                                      <option data-svg-code="pc2" value="pc2">Planechase 2012</option>
+                                      <option data-svg-code="hop" value="hop">Planechase</option></optgroup><optgroup label="Premium Deck"><option data-svg-code="pd3" value="pd3">Premium Deck Series: Graveborn</option>
+                                        <option data-svg-code="pd2" value="pd2">Premium Deck Series: Fire and Lightning</option>
+                                        <option data-svg-code="h09" value="h09">Premium Deck Series: Slivers</option></optgroup><optgroup label="Promo"><option data-svg-code="m19" value="pgp1">M19 Gift Pack</option>
+                                          <option data-svg-code="grn" value="pgrn">Guilds of Ravnica Promos</option>
+                                          <option data-svg-code="grn" value="prwk">Ravnica Weekend</option>
+                                          <option data-svg-code="default" value="ps18">San Diego Comic-Con 2018</option>
+                                          <option data-svg-code="star" value="pss3">M19 Standard Showdown</option>
+                                          <option data-svg-code="m19" value="pm19">Core Set 2019 Promos</option>
+                                          <option data-svg-code="bbd" value="pbbd">Battlebond Promos</option>
+                                          <option data-svg-code="dom" value="pdom">Dominaria Promos</option>
+                                          <option data-svg-code="star" value="plny">2018 Lunar New Year</option>
+                                          <option data-svg-code="star" value="pnat">Nationals Promos</option>
+                                          <option data-svg-code="rix" value="prix">Rivals of Ixalan Promos</option>
+                                          <option data-svg-code="star" value="j18">Judge Gift Cards 2018</option>
+                                          <option data-svg-code="star" value="f18">Friday Night Magic 2018</option>
+                                          <option data-svg-code="xln" value="pxtc">XLN Treasure Chest</option>
+                                          <option data-svg-code="ust" value="pust">Unstable Promos</option>
+                                          <option data-svg-code="star" value="pgp17">2017 Gift Pack</option>
+                                          <option data-svg-code="xln" value="pxln">Ixalan Promos</option>
+                                          <option data-svg-code="star" value="pss2">XLN Standard Showdown</option>
+                                          <option data-svg-code="default" value="ps17">San Diego Comic-Con 2017</option>
+                                          <option data-svg-code="hou" value="phou">Hour of Devastation Promos</option>
+                                          <option data-svg-code="akh" value="pakh">Amonkhet Promos</option>
+                                          <option data-svg-code="aer" value="paer">Aether Revolt Promos</option>
+                                          <option data-svg-code="star" value="j17">Judge Gift Cards 2017</option>
+                                          <option data-svg-code="star" value="f17">Friday Night Magic 2017</option>
+                                          <option data-svg-code="default" value="ps16">San Diego Comic-Con 2016</option>
+                                          <option data-svg-code="kld" value="pkld">Kaladesh Promos</option>
+                                          <option data-svg-code="emn" value="pemn">Eldritch Moon Promos</option>
+                                          <option data-svg-code="soi" value="psoi">Shadows over Innistrad Promos</option>
+                                          <option data-svg-code="ogw" value="pogw">Oath of the Gatewatch Promos</option>
+                                          <option data-svg-code="star" value="j16">Judge Gift Cards 2016</option>
+                                          <option data-svg-code="star" value="f16">Friday Night Magic 2016</option>
+                                          <option data-svg-code="bfz" value="pss1">BFZ Standard Series</option>
+                                          <option data-svg-code="bfz" value="pbfz">Battle for Zendikar Promos</option>
+                                          <option data-svg-code="ori" value="pori">Magic Origins Promos</option>
+                                          <option data-svg-code="default" value="ps15">San Diego Comic-Con 2015</option>
+                                          <option data-svg-code="dtk" value="ptkdf">Tarkir Dragonfury</option>
+                                          <option data-svg-code="dtk" value="pdtk">Dragons of Tarkir Promos</option>
+                                          <option data-svg-code="frf" value="pfrf">Fate Reforged Promos</option>
+                                          <option data-svg-code="frf" value="ugin">Ugin's Fate</option>
+                                          <option data-svg-code="star" value="j15">Judge Gift Cards 2015</option>
+                                          <option data-svg-code="star" value="f15">Friday Night Magic 2015</option>
+                                          <option data-svg-code="ktk" value="pktk">Khans of Tarkir Promos</option>
+                                          <option data-svg-code="m15" value="pm15">Magic 2015 Promos</option>
+                                          <option data-svg-code="default" value="ps14">San Diego Comic-Con 2014</option>
+                                          <option data-svg-code="jou" value="pjou">Journey into Nyx Promos</option>
+                                          <option data-svg-code="bng" value="pbng">Born of the Gods Promos</option>
+                                          <option data-svg-code="m15" value="pdp14">Duels of the Planeswalkers Promos 2014</option>
+                                          <option data-svg-code="pidw" value="pi14">IDW Comics 2014</option>
+                                          <option data-svg-code="star" value="f14">Friday Night Magic 2014</option>
+                                          <option data-svg-code="star" value="j14">Judge Gift Cards 2014</option>
+                                          <option data-svg-code="ths" value="pths">Theros Promos</option>
+                                          <option data-svg-code="m14" value="pm14">Magic 2014 Promos</option>
+                                          <option data-svg-code="default" value="psdc">San Diego Comic-Con 2013</option>
+                                          <option data-svg-code="dgm" value="pdgm">Dragon's Maze Promos</option>
+                                          <option data-svg-code="star" value="pwcq">World Magic Cup Qualifiers</option>
+                                          <option data-svg-code="gtc" value="pgtc">Gatecrash Promos</option>
+                                          <option data-svg-code="m14" value="pdp13">Duels of the Planeswalkers Promos 2013</option>
+                                          <option data-svg-code="pidw" value="pi13">IDW Comics 2013</option>
+                                          <option data-svg-code="star" value="j13">Judge Gift Cards 2013</option>
+                                          <option data-svg-code="star" value="f13">Friday Night Magic 2013</option>
+                                          <option data-svg-code="rtr" value="prtr">Return to Ravnica Promos</option>
+                                          <option data-svg-code="m13" value="pm13">Magic 2013 Promos</option>
+                                          <option data-svg-code="avr" value="pavr">Avacyn Restored Promos</option>
+                                          <option data-svg-code="dka" value="pdka">Dark Ascension Promos</option>
+                                          <option data-svg-code="pidw" value="pidw">IDW Comics 2012</option>
+                                          <option data-svg-code="star" value="pwp12">Wizards Play Network 2012</option>
+                                          <option data-svg-code="m13" value="pdp12">Duels of the Planeswalkers Promos 2012</option>
+                                          <option data-svg-code="star" value="f12">Friday Night Magic 2012</option>
+                                          <option data-svg-code="star" value="j12">Judge Gift Cards 2012</option>
+                                          <option data-svg-code="isd" value="pisd">Innistrad Promos</option>
+                                          <option data-svg-code="m12" value="pm12">Magic 2012 Promos</option>
+                                          <option data-svg-code="nph" value="pnph">New Phyrexia Promos</option>
+                                          <option data-svg-code="mbs" value="pmbs">Mirrodin Besieged Promos</option>
+                                          <option data-svg-code="pmps" value="pmps11">Magic Premiere Shop 2011</option>
+                                          <option data-svg-code="pmtg2" value="pdp11">Duels of the Planeswalkers Promos 2011</option>
+                                          <option data-svg-code="star" value="pwp11">Wizards Play Network 2011</option>
+                                          <option data-svg-code="default" value="p11">Magic Player Rewards 2011</option>
+                                          <option data-svg-code="default" value="g11">Judge Gift Cards 2011</option>
+                                          <option data-svg-code="star" value="f11">Friday Night Magic 2011</option>
+                                          <option data-svg-code="dd2" value="pdd2">Duel Decks: Jace vs. Chandra Japanese Promos</option>
+                                          <option data-svg-code="som" value="psom">Scars of Mirrodin Promos</option>
+                                          <option data-svg-code="m11" value="pm11">Magic 2011 Promos</option>
+                                          <option data-svg-code="roe" value="proe">Rise of the Eldrazi Promos</option>
+                                          <option data-svg-code="wwk" value="pwwk">Worldwake Promos</option>
+                                          <option data-svg-code="pmtg2" value="pdp10">Duels of the Planeswalkers Promos 2010</option>
+                                          <option data-svg-code="dci" value="pwp10">Wizards Play Network 2010</option>
+                                          <option data-svg-code="pmps" value="pmps10">Magic Premiere Shop 2010</option>
+                                          <option data-svg-code="default" value="p10">Magic Player Rewards 2010</option>
+                                          <option data-svg-code="dci" value="f10">Friday Night Magic 2010</option>
+                                          <option data-svg-code="dci" value="g10">Judge Gift Cards 2010</option>
+                                          <option data-svg-code="zen" value="pzen">Zendikar Promos</option>
+                                          <option data-svg-code="dci" value="phop">Promotional Planes</option>
+                                          <option data-svg-code="m10" value="pm10">Magic 2010 Promos</option>
+                                          <option data-svg-code="star" value="purl">URL/Convention Promos</option>
+                                          <option data-svg-code="pbook" value="pbok">Miscellaneous Book Promos</option>
+                                          <option data-svg-code="dci" value="pwp09">Wizards Play Network 2009</option>
+                                          <option data-svg-code="pxbox" value="pdtp">Duels of the Planeswalkers Promos 2009</option>
+                                          <option data-svg-code="pmps" value="pmps09">Magic Premiere Shop 2009</option>
+                                          <option data-svg-code="dci" value="g09">Judge Gift Cards 2009</option>
+                                          <option data-svg-code="dci" value="f09">Friday Night Magic 2009</option>
+                                          <option data-svg-code="default" value="p09">Magic Player Rewards 2009</option>
+                                          <option data-svg-code="dci" value="pwpn">Wizards Play Network 2008</option>
+                                          <option data-svg-code="default" value="p15a">15th Anniversary Cards</option>
+                                          <option data-svg-code="default" value="plpa">Launch Parties</option>
+                                          <option data-svg-code="pmps" value="pmps08">Magic Premiere Shop 2008</option>
+                                          <option data-svg-code="dci" value="pg08">Gateway 2008</option>
+                                          <option data-svg-code="default" value="p08">Magic Player Rewards 2008</option>
+                                          <option data-svg-code="dci" value="g08">Judge Gift Cards 2008</option>
+                                          <option data-svg-code="dci" value="f08">Friday Night Magic 2008</option>
+                                          <option data-svg-code="psum" value="psum">Summer of Magic</option>
+                                          <option data-svg-code="10e" value="p10e">Tenth Edition Promos</option>
+                                          <option data-svg-code="default" value="pgpx">Grand Prix Promos</option>
+                                          <option data-svg-code="star" value="ppro">Pro Tour Promos</option>
+                                          <option data-svg-code="star" value="pres">Resale Promos</option>
+                                          <option data-svg-code="dci" value="pg07">Gateway 2007</option>
+                                          <option data-svg-code="pmps" value="pmps07">Magic Premiere Shop 2007</option>
+                                          <option data-svg-code="dci" value="f07">Friday Night Magic 2007</option>
+                                          <option data-svg-code="default" value="p07">Magic Player Rewards 2007</option>
+                                          <option data-svg-code="dci" value="g07">Judge Gift Cards 2007</option>
+                                          <option data-svg-code="default" value="pcmp">Champs and States</option>
+                                          <option data-svg-code="parl" value="pal06">Arena League 2006</option>
+                                          <option data-svg-code="pmtg2" value="pmps06">Magic Premiere Shop 2006</option>
+                                          <option data-svg-code="dci" value="pjas">Junior APAC Series</option>
+                                          <option data-svg-code="dci" value="f06">Friday Night Magic 2006</option>
+                                          <option data-svg-code="dci" value="pgtw">Gateway 2006</option>
+                                          <option data-svg-code="dci" value="p06">Magic Player Rewards 2006</option>
+                                          <option data-svg-code="dci" value="g06">Judge Gift Cards 2006</option>
+                                          <option data-svg-code="dci" value="p2hg">Two-Headed Giant Tournament</option>
+                                          <option data-svg-code="rav" value="pmps">Magic Premiere Shop 2005</option>
+                                          <option data-svg-code="parl" value="pal05">Arena League 2005</option>
+                                          <option data-svg-code="dci" value="pjse">Junior Series Europe</option>
+                                          <option data-svg-code="dci" value="f05">Friday Night Magic 2005</option>
+                                          <option data-svg-code="dci" value="p05">Magic Player Rewards 2005</option>
+                                          <option data-svg-code="dci" value="g05">Judge Gift Cards 2005</option>
+                                          <option data-svg-code="parl" value="pal04">Arena League 2004</option>
+                                          <option data-svg-code="dci" value="f04">Friday Night Magic 2004</option>
+                                          <option data-svg-code="dci" value="g04">Judge Gift Cards 2004</option>
+                                          <option data-svg-code="dci" value="p04">Magic Player Rewards 2004</option>
+                                          <option data-svg-code="default" value="prel">Release Events</option>
+                                          <option data-svg-code="default" value="pjjt">Japan Junior Tournament</option>
+                                          <option data-svg-code="parl" value="pal03">Arena League 2003</option>
+                                          <option data-svg-code="dci" value="f03">Friday Night Magic 2003</option>
+                                          <option data-svg-code="dci" value="g03">Judge Gift Cards 2003</option>
+                                          <option data-svg-code="dci" value="p03">Magic Player Rewards 2003</option>
+                                          <option data-svg-code="mtgo" value="prm">Magic Online Promos</option>
+                                          <option data-svg-code="parl" value="pal02">Arena League 2002</option>
+                                          <option data-svg-code="dci" value="f02">Friday Night Magic 2002</option>
+                                          <option data-svg-code="dci" value="pr2">Magic Player Rewards 2002</option>
+                                          <option data-svg-code="dci" value="g02">Judge Gift Cards 2002</option>
+                                          <option data-svg-code="parl2" value="pal01">Arena League 2001</option>
+                                          <option data-svg-code="dci" value="g01">Judge Gift Cards 2001</option>
+                                          <option data-svg-code="dci" value="f01">Friday Night Magic 2001</option>
+                                          <option data-svg-code="dci" value="mpr">Magic Player Rewards 2001</option>
+                                          <option data-svg-code="default" value="pelp">European Land Program</option>
+                                          <option data-svg-code="default" value="pal00">Arena League 2000</option>
+                                          <option data-svg-code="dci" value="g00">Judge Gift Cards 2000</option>
+                                          <option data-svg-code="default" value="fnm">Friday Night Magic 2000</option>
+                                          <option data-svg-code="dci" value="psus">Junior Super Series</option>
+                                          <option data-svg-code="default" value="pwos">Wizards of the Coast Online Store</option>
+                                          <option data-svg-code="default" value="pwor">Worlds</option>
+                                          <option data-svg-code="pgru" value="pgru">Guru</option>
+                                          <option data-svg-code="usg" value="pal99">Arena League 1999</option>
+                                          <option data-svg-code="default" value="g99">Judge Gift Cards 1999</option>
+                                          <option data-svg-code="default" value="palp">Asia Pacific Land Program</option>
+                                          <option data-svg-code="default" value="jgp">Judge Gift Cards 1998</option>
+                                          <option data-svg-code="default" value="ppre">Prerelease Events</option>
+                                          <option data-svg-code="parl" value="parl">Arena League 1996</option>
+                                          <option data-svg-code="default" value="plgm">DCI Legend Membership</option>
+                                          <option data-svg-code="pmei" value="pmei">Magazine Inserts</option>
+                                          <option data-svg-code="pdrc" value="pdrc">Dragon Con</option>
+                                          <option data-svg-code="pbook" value="phpr">HarperPrism Book Promos</option></optgroup><optgroup label="Spellbook"><option data-svg-code="ss1" value="ss1">Signature Spellbook: Jace</option></optgroup><optgroup label="Starter"><option data-svg-code="grn" value="gk1">GRN Guild Kit</option>
+                                            <option data-svg-code="mtga" value="ana">Arena New Player Experience</option>
+                                            <option data-svg-code="w17" value="w17">Welcome Deck 2017</option>
+                                            <option data-svg-code="w16" value="w16">Welcome Deck 2016</option>
+                                            <option data-svg-code="star" value="cp3">Magic Origins Clash Pack</option>
+                                            <option data-svg-code="star" value="cp2">Fate Reforged Clash Pack</option>
+                                            <option data-svg-code="star" value="cp1">Magic 2015 Clash Pack</option>
+                                            <option data-svg-code="s00" value="s00">Starter 2000</option>
+                                            <option data-svg-code="s99" value="s99">Starter 1999</option>
+                                            <option data-svg-code="ptk" value="ptk">Portal Three Kingdoms</option>
+                                            <option data-svg-code="p02" value="p02">Portal Second Age</option>
+                                            <option data-svg-code="por" value="por">Portal</option>
+                                            <option data-svg-code="por" value="ppod">Portal Demo Game</option>
+                                            <option data-svg-code="default" value="itp">Introductory Two-Player Set</option></optgroup><optgroup label="Token"><option data-svg-code="grn" value="tgk1">GRN Guild Kit Tokens</option>
+                                              <option data-svg-code="grn" value="tgrn">Guilds of Ravnica Tokens</option>
+                                              <option data-svg-code="c18" value="tc18">Commander 2018 Tokens</option>
+                                              <option data-svg-code="m19" value="tm19">Core Set 2019 Tokens</option>
+                                              <option data-svg-code="cm2" value="tcm2">Commander Anthology Volume II Tokens</option>
+                                              <option data-svg-code="bbd" value="tbbd">Battlebond Tokens</option>
+                                              <option data-svg-code="dom" value="tdom">Dominaria Tokens</option>
+                                              <option data-svg-code="ddu" value="tddu">Duel Decks: Elves vs. Inventors Tokens</option>
+                                              <option data-svg-code="a25" value="ta25">Masters 25 Tokens</option>
+                                              <option data-svg-code="rix" value="trix">Rivals of Ixalan Tokens</option>
+                                              <option data-svg-code="ima" value="tima">Iconic Masters Tokens</option>
+                                              <option data-svg-code="ust" value="tust">Unstable Tokens</option>
+                                              <option data-svg-code="ddt" value="tddt">Duel Decks: Merfolk vs. Goblins Tokens</option>
+                                              <option data-svg-code="xln" value="txln">Ixalan Tokens</option>
+                                              <option data-svg-code="e01" value="te01">Archenemy: Nicol Bolas Tokens</option>
+                                              <option data-svg-code="c17" value="tc17">Commander 2017 Tokens</option>
+                                              <option data-svg-code="hou" value="thou">Hour of Devastation Tokens</option>
+                                              <option data-svg-code="cma" value="tcma">Commander Anthology Tokens</option>
+                                              <option data-svg-code="akh" value="takh">Amonkhet Tokens</option>
+                                              <option data-svg-code="dds" value="tdds">Duel Decks: Mind vs. Might Tokens</option>
+                                              <option data-svg-code="mm3" value="tmm3">Modern Masters 2017 Tokens</option>
+                                              <option data-svg-code="aer" value="taer">Aether Revolt Tokens</option>
+                                              <option data-svg-code="default" value="l17">League Tokens 2017</option>
+                                              <option data-svg-code="default" value="tpca">Planechase Anthology Tokens</option>
+                                              <option data-svg-code="c16" value="tc16">Commander 2016 Tokens</option>
+                                              <option data-svg-code="kld" value="tkld">Kaladesh Tokens</option>
+                                              <option data-svg-code="cn2" value="tcn2">Conspiracy: Take the Crown Tokens</option>
+                                              <option data-svg-code="emn" value="temn">Eldritch Moon Tokens</option>
+                                              <option data-svg-code="ema" value="tema">Eternal Masters Tokens</option>
+                                              <option data-svg-code="soi" value="tsoi">Shadows over Innistrad Tokens</option>
+                                              <option data-svg-code="ogw" value="togw">Oath of the Gatewatch Tokens</option>
+                                              <option data-svg-code="default" value="l16">League Tokens 2016</option>
+                                              <option data-svg-code="c15" value="tc15">Commander 2015 Tokens</option>
+                                              <option data-svg-code="bfz" value="tbfz">Battle for Zendikar Tokens</option>
+                                              <option data-svg-code="ori" value="tori">Magic Origins Tokens</option>
+                                              <option data-svg-code="mm2" value="tmm2">Modern Masters 2015 Tokens</option>
+                                              <option data-svg-code="dtk" value="tdtk">Dragons of Tarkir Tokens</option>
+                                              <option data-svg-code="frf" value="tfrf">Fate Reforged Tokens</option>
+                                              <option data-svg-code="default" value="l15">League Tokens 2015</option>
+                                              <option data-svg-code="dd2" value="tjvc">Duel Decks Anthology: Jace vs. Chandra Tokens</option>
+                                              <option data-svg-code="ddc" value="tdvd">Duel Decks Anthology: Divine vs. Demonic Tokens</option>
+                                              <option data-svg-code="ddd" value="tgvl">Duel Decks Anthology: Garruk vs. Liliana Tokens</option>
+                                              <option data-svg-code="dd1" value="tevg">Duel Decks Anthology: Elves vs. Goblins Tokens</option>
+                                              <option data-svg-code="c14" value="tc14">Commander 2014 Tokens</option>
+                                              <option data-svg-code="ktk" value="tktk">Khans of Tarkir Tokens</option>
+                                              <option data-svg-code="default" value="tddn">Duel Decks: Speed vs. Cunning Tokens</option>
+                                              <option data-svg-code="m15" value="tm15">Magic 2015 Tokens</option>
+                                              <option data-svg-code="cns" value="tcns">Conspiracy Tokens</option>
+                                              <option data-svg-code="md1" value="tmd1">Modern Event Deck 2014 Tokens</option>
+                                              <option data-svg-code="jou" value="tdag">Defeat a God</option>
+                                              <option data-svg-code="jou" value="thp3">Journey into Nyx Hero's Path</option>
+                                              <option data-svg-code="jou" value="tjou">Journey into Nyx Tokens</option>
+                                              <option data-svg-code="ddm" value="tddm">Duel Decks: Jace vs. Vraska Tokens</option>
+                                              <option data-svg-code="bng" value="tbth">Battle the Horde</option>
+                                              <option data-svg-code="bng" value="tbng">Born of the Gods Tokens</option>
+                                              <option data-svg-code="bng" value="thp2">Born of the Gods Hero's Path</option>
+                                              <option data-svg-code="default" value="l14">League Tokens 2014</option>
+                                              <option data-svg-code="ths" value="tfth">Face the Hydra</option>
+                                              <option data-svg-code="ths" value="thp1">Theros Hero's Path</option>
+                                              <option data-svg-code="ths" value="tths">Theros Tokens</option>
+                                              <option data-svg-code="ddl" value="tddl">Duel Decks: Heroes vs. Monsters Tokens</option>
+                                              <option data-svg-code="m14" value="tm14">Magic 2014 Tokens</option>
+                                              <option data-svg-code="mma" value="tmma">Modern Masters Tokens</option>
+                                              <option data-svg-code="dgm" value="tdgm">Dragon's Maze Tokens</option>
+                                              <option data-svg-code="ddk" value="tddk">Duel Decks: Sorin vs. Tibalt Tokens</option>
+                                              <option data-svg-code="gtc" value="tgtc">Gatecrash Tokens</option>
+                                              <option data-svg-code="default" value="l13">League Tokens 2013</option>
+                                              <option data-svg-code="rtr" value="trtr">Return to Ravnica Tokens</option>
+                                              <option data-svg-code="ddj" value="tddj">Duel Decks: Izzet vs. Golgari Tokens</option>
+                                              <option data-svg-code="m13" value="tm13">Magic 2013 Tokens</option>
+                                              <option data-svg-code="avr" value="tavr">Avacyn Restored Tokens</option>
+                                              <option data-svg-code="ddi" value="tddi">Duel Decks: Venser vs. Koth Tokens</option>
+                                              <option data-svg-code="dka" value="tdka">Dark Ascension Tokens</option>
+                                              <option data-svg-code="default" value="l12">League Tokens 2012</option>
+                                              <option data-svg-code="isd" value="tisd">Innistrad Tokens</option>
+                                              <option data-svg-code="ddh" value="tddh">Duel Decks: Ajani vs. Nicol Bolas Tokens</option>
+                                              <option data-svg-code="m12" value="tm12">Magic 2012 Tokens</option>
+                                              <option data-svg-code="nph" value="tnph">New Phyrexia Tokens</option>
+                                              <option data-svg-code="ddg" value="tddg">Duel Decks: Knights vs. Dragons Tokens</option>
+                                              <option data-svg-code="mbs" value="tmbs">Mirrodin Besieged Tokens</option>
+                                              <option data-svg-code="som" value="tsom">Scars of Mirrodin Tokens</option>
+                                              <option data-svg-code="ddf" value="tddf">Duel Decks: Elspeth vs. Tezzeret Tokens</option>
+                                              <option data-svg-code="m11" value="tm11">Magic 2011 Tokens</option>
+                                              <option data-svg-code="roe" value="troe">Rise of the Eldrazi Tokens</option>
+                                              <option data-svg-code="dde" value="tdde">Duel Decks: Phyrexia vs. the Coalition Tokens</option>
+                                              <option data-svg-code="wwk" value="twwk">Worldwake Tokens</option>
+                                              <option data-svg-code="ddd" value="tddd">Duel Decks: Garruk vs. Liliana Tokens</option>
+                                              <option data-svg-code="zen" value="tzen">Zendikar Tokens</option>
+                                              <option data-svg-code="m10" value="tm10">Magic 2010 Tokens</option>
+                                              <option data-svg-code="arb" value="tarb">Alara Reborn Tokens</option>
+                                              <option data-svg-code="ddc" value="tddc">Duel Decks: Divine vs. Demonic Tokens</option>
+                                              <option data-svg-code="con" value="tcon">Conflux Tokens</option>
+                                              <option data-svg-code="dd2" value="tdd2">Duel Decks: Jace vs. Chandra Tokens</option>
+                                              <option data-svg-code="ala" value="tala">Shards of Alara Tokens</option>
+                                              <option data-svg-code="eve" value="teve">Eventide Tokens</option>
+                                              <option data-svg-code="shm" value="tshm">Shadowmoor Tokens</option>
+                                              <option data-svg-code="mor" value="tmor">Morningtide Tokens</option>
+                                              <option data-svg-code="lrw" value="tlrw">Lorwyn Tokens</option>
+                                              <option data-svg-code="10e" value="t10e">Tenth Edition Tokens</option>
+                                              <option data-svg-code="csp" value="tcsp">Coldsnap Tokens</option>
+                                              <option data-svg-code="default" value="tugl">Unglued Tokens</option></optgroup><optgroup label="Treasure Chest"><option data-svg-code="pz2" value="pz2">You Make the Cube</option>
+                                                <option data-svg-code="pz1" value="pz1">Legendary Cube</option></optgroup><optgroup label="Vanguard"><option data-svg-code="mtgo" value="pmoa">Magic Online Avatars</option>
+                                                  <option data-svg-code="default" value="pvan">Vanguard Series</option></optgroup></select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 397.656px;"><span class="selection"><span class="select2-selection select2-selection--multiple" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1"><ul class="select2-selection__rendered"><li class="select2-search select2-search--inline"><input class="select2-search__field" type="search" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" role="textbox" aria-autocomplete="list" placeholder="Enter a set name or choose from the list" style="width: 404px;"></li></ul></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                                </div>
+                                                <div class="form-row-content-band">
+                                                  <label class="visuallyhidden" for="block">Block or Group</label>
+                                                  <input name="block[]" type="hidden" value=""><select name="block[]" id="block" multiple="" data-component="advanced-search-autocomplete" data-placeholder="Enter a block name or choose from the list" tabindex="-1" class="select2-hidden-accessible" aria-hidden="true"><option value="grn">Guilds of Ravnica</option>
+                                                    <option value="xln">Ixalan</option>
+                                                    <option value="akh">Amonkhet</option>
+                                                    <option value="kld">Kaladesh</option>
+                                                    <option value="soi">Shadows Over Innistrad</option>
+                                                    <option value="bfz">Battle for Zendikar</option>
+                                                    <option value="ktk">Khans of Tarkir</option>
+                                                    <option value="ths">Theros</option>
+                                                    <option value="rtr">Return to Ravnica</option>
+                                                    <option value="isd">Innistrad</option>
+                                                    <option value="som">Scars of Mirrodin</option>
+                                                    <option value="zen">Zendikar</option>
+                                                    <option value="ala">Alara</option>
+                                                    <option value="shm">Shadowmoor</option>
+                                                    <option value="lrw">Lorwyn</option>
+                                                    <option value="tsp">Time Spiral</option>
+                                                    <option value="rav">Ravnica</option>
+                                                    <option value="chk">Kamigawa</option>
+                                                    <option value="mrd">Mirrodin</option>
+                                                    <option value="ons">Onslaught</option>
+                                                    <option value="ody">Odyssey</option>
+                                                    <option value="inv">Invasion</option>
+                                                    <option value="mmq">Masques</option>
+                                                    <option value="usg">Urza</option>
+                                                    <option value="tmp">Tempest</option>
+                                                    <option value="mir">Mirage</option>
+                                                    <option value="ice">Ice Age</option></select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 205.078px;"><span class="selection"><span class="select2-selection select2-selection--multiple" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1"><ul class="select2-selection__rendered"><li class="select2-search select2-search--inline"><input class="select2-search__field" type="search" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" role="textbox" aria-autocomplete="list" placeholder="Enter a block name or choose from the list" style="width: 404px;"></li></ul></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                                  </div>
+
+                                                  <p class="form-row-tip">
+                                                    Restrict cards based on their set, block, or group.
+                                                  </p>
+
+                                                </div>
+
+                                              </div>
 
 
 
   </body>
 </html>
+
 
 
 
